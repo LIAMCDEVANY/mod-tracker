@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Mod Tracker</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="/mods">Mods</a>
+
+    <% if (userId) { %>
+      <span>Hi, <%= username %></span>
+      <form action="/auth/logout" method="POST" style="display:inline;">
+        <button type="submit">Logout</button>
+      </form>
+    <% } else { %>
+      <a href="/auth/login">Login</a>
+      <a href="/auth/signup">Sign Up</a>
+    <% } %>
+  </nav>
+
+  <main>
+    <%- body %>
+  </main>
+
+</body>
+</html>

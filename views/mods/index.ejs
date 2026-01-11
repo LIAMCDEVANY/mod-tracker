@@ -1,0 +1,23 @@
+<h1>Your Mods</h1>
+
+<a href="/mods/new" class="primary-btn">➕ Add New Mod</a>
+
+<% if (mods.length === 0) { %>
+  <p>No mods yet.</p>
+<% } else { %>
+  <ul>
+    <% mods.forEach(mod => { %>
+      <li>
+        <strong><%= mod.name %></strong>
+        — <%= mod.status %>
+        |
+        <a href="/mods/<%= mod._id %>">View</a>
+      </li><div class="empty-state">
+  <h1>Your Mods</h1>
+  <a href="/mods/new" class="primary-btn">➕ Add New Mod</a>
+  <p>No mods yet.</p>
+</div>
+
+    <% }) %>
+  </ul>
+<% } %>

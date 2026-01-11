@@ -1,0 +1,18 @@
+<h1><%= mod.name %></h1>
+
+<p><strong>Status:</strong> <%= mod.status %></p>
+
+<p><strong>Notes:</strong></p>
+<p style="white-space: pre-wrap;"><%= mod.notes || "None" %></p>
+
+<p><strong>Links:</strong></p>
+<p><%= mod.links || "None" %></p>
+
+<a href="/mods/<%= mod._id %>/edit">✏️ Edit</a>
+
+<form action="/mods/<%= mod._id %>?_method=DELETE" method="POST" style="display:inline;">
+  <button type="submit">🗑 Delete</button>
+</form>
+
+<br /><br />
+<a href="/mods">⬅ Back to Mods</a>

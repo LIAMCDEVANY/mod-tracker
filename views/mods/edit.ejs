@@ -1,0 +1,23 @@
+<h1>Edit Mod</h1>
+
+<% if (error) { %>
+  <p style="color:red;"><%= error %></p>
+<% } %>
+
+<form action="/mods/<%= mod._id %>?_method=PUT" method="POST">
+  <label>Name</label>
+  <input name="name" value="<%= mod.name %>" required />
+
+  <label>Status</label>
+  <input name="status" value="<%= mod.status %>" required />
+
+  <label>Notes</label>
+  <textarea name="notes"><%= mod.notes %></textarea>
+
+  <label>Links</label>
+  <input name="links" value="<%= mod.links %>" />
+
+  <button type="submit">Update Mod</button>
+</form>
+
+<a href="/mods/<%= mod._id %>">⬅ Cancel</a>

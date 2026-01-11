@@ -1,0 +1,23 @@
+<h1>Create New Mod</h1>
+
+<% if (error) { %>
+  <p style="color:red;"><%= error %></p>
+<% } %>
+
+<form action="/mods" method="POST">
+  <label>Name</label>
+  <input name="name" required />
+
+  <label>Status</label>
+  <input name="status" required />
+
+  <label>Notes</label>
+  <textarea name="notes"></textarea>
+
+  <label>Links</label>
+  <input name="links" />
+
+  <button type="submit">Create Mod</button>
+</form>
+
+<a href="/mods">⬅ Back</a>
