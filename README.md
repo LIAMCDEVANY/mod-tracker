@@ -18,7 +18,7 @@ This project demonstrates full CRUD functionality, user authentication, session 
 
 ---
 
-## Screenshots
+## Screenshot
 <img width="2290" height="1004" alt="ModTracker" src="https://github.com/user-attachments/assets/67a002d8-714d-4825-b354-fa2982b4290b" />
 
 
